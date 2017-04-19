@@ -14,8 +14,7 @@
  * (at your option) any later version.
  *
  * @author PocketMine Team
- * @link http://www.pocketmine.net/
- * 
+ * @link http://www.pocketmine.net/ * 
  *
 */
 
@@ -25,8 +24,7 @@ namespace {
 		foreach(func_get_args() as $var){
 			switch(true){
 				case is_array($var):
-					echo str_repeat("  ", $cnt) . "array(" . count($var) . ") {" . PHP_EOL;
-					foreach($var as $key => $value){
+					echo str_repeat("  ", $cnt) . "array(" . count($var) . ") {" . PHP_EOL;					foreach($var as $key => $value){
 						echo str_repeat("  ", $cnt + 1) . "[" . (is_integer($key) ? $key : '"' . $key . '"') . "]=>" . PHP_EOL;
 						++$cnt;
 						safe_var_dump($value);
@@ -36,25 +34,21 @@ namespace {
 					break;
 				case is_int($var):
 					echo str_repeat("  ", $cnt) . "int(" . $var . ")" . PHP_EOL;
-					break;
-				case is_float($var):
+					break;				case is_float($var):
 					echo str_repeat("  ", $cnt) . "float(" . $var . ")" . PHP_EOL;
 					break;
 				case is_bool($var):
-					echo str_repeat("  ", $cnt) . "bool(" . ($var === true ? "true" : "false") . ")" . PHP_EOL;
-					break;
+					echo str_repeat("  ", $cnt) . "bool(" . ($var === true ? "true" : "false") . ")" . PHP_EOL;					break;
 				case is_string($var):
 					echo str_repeat("  ", $cnt) . "string(" . strlen($var) . ") \"$var\"" . PHP_EOL;
 					break;
 				case is_resource($var):
-					echo str_repeat("  ", $cnt) . "resource() of type (" . get_resource_type($var) . ")" . PHP_EOL;
-					break;
+					echo str_repeat("  ", $cnt) . "resource() of type (" . get_resource_type($var) . ")" . PHP_EOL;					break;
 				case is_object($var):
 					echo str_repeat("  ", $cnt) . "object(" . get_class($var) . ")" . PHP_EOL;
 					break;
 				case is_null($var):
-					echo str_repeat("  ", $cnt) . "NULL" . PHP_EOL;
-					break;
+					echo str_repeat("  ", $cnt) . "NULL" . PHP_EOL;					break;
 			}
 		}
 	}
@@ -75,8 +69,8 @@ namespace pocketmine {
 	const VERSION = "1.6dev";
 	const API_VERSION = "2.0.0";
 	const CODENAME = "Unleashed";
-	const MINECRAFT_VERSION = "v0.15.0.0 alpha";
-	const MINECRAFT_VERSION_NETWORK = "0.15.0.0";
+	const MINECRAFT_VERSION = "v1.0.6";
+	const MINECRAFT_VERSION_NETWORK = "1.0.6";
 
 	/*
 	 * Startup code. Do not look at it, it may harm you.
